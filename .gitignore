@@ -4,4 +4,5 @@
 
 package-lock.json
 
+cypress/screenshots
 cypress.env.json
