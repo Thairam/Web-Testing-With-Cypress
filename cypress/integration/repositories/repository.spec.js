@@ -37,6 +37,33 @@ describe('Repositories', () => {
         cy.url().should('to.be.equal', newUrl)
     })
 
+    it('create an issue', () => {
+        cy.visit(`/${Cypress.env('username')}?tab=repositories`)
+
+        const issueTitle = faker.name.title()
+
+        cy.get(loc.REPOSITORY_LIST.FIRST_REPOSITORY_FOUNDED)
+            .should('be.visible').click()
+
+        cy.get(loc.NAV_BAR.FN_FIND_LI_BY_DESCRIPTION('Issues'))
+            .should('be.visible').click()
+
+        cy.get("span:contains('New issue')")
+            .should('be.visible').click()
+
+        cy.get('#issue_title')
+            .clear().type(issueTitle)
+
+        cy.get('#issue_body')
+            .clear().type(faker.lorem.sentence(5))
+
+        cy.get(".flex-justify-end > button:contains('Submit new issue')").click()
+
+        cy.get('.gh-header-title > .js-issue-title')
+            .invoke('text')
+            .then(text => expect(text.trim()).to.be.equal(issueTitle))
+    })
+
     it('delete a repository', () => {
         cy.visit(`/${Cypress.env('username')}?tab=repositories`)
 
