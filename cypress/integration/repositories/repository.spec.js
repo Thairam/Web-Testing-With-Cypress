@@ -5,17 +5,14 @@ describe('Repositories', () => {
 
     let fakerRepositoryName = faker.name.jobTitle()
 
-    before(() => {
-        cy.gui_login()
+    beforeEach(() => {
+        cy.gui_login(Cypress.env('username'), Cypress.env('password'))
+        cy.visit('/')
     })
 
-    after(() => {
+    afterEach(() => {
         cy.clearCookies()
         cy.clearLocalStorage()
-    })
-
-    beforeEach(() => {
-        cy.visit('/')
     })
 
     it('create a new repository', () => {
