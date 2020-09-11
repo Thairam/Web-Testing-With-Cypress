@@ -22,6 +22,8 @@ The purpose of this repository is just to show a way on how to use Cypress to au
 
 Testing real websites requires knowledge of different testing strategies.
 
+:warning: one of the tests will delete the first repository found in the user's list of repositories, so to avoid surprises, use a new Github account to run the tests.
+
 ## Installation and Execution
 #### 1. Install dependencies
 ```sh  
