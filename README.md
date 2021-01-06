@@ -2,9 +2,11 @@
 
 [![Node][node-image]][node-url] [![Dependencies][dependencies-image]][dependencies-url] [![DependenciesDev][dependencies-dev-image]][dependencies-dev-url] [![Commit][last-commit-image]][last-commit-url] [![Contributors][contributors-image]][contributors-url]
 
-Didactic example of how to implement and organize automated Web tests using Cypress. For this, Github website was used.
+Didactic example of how to implement and organize automated Web tests using Cypress.
 
-- [Github](https://github.com/)
+This repository contains:
+- Tests applied to WebSystem [Github](https://github.com/);
+- Tests that access to a MySQL database;
 
 ## Prerequisites
 - [Node 12.16.1+](https://nodejs.org/en/download/)

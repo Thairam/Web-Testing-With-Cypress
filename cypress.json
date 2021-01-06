@@ -2,5 +2,14 @@
     "baseUrl": "https://github.com",
     "viewportHeight": 900,
     "viewportWidth": 1400,
-    "video": false
+    "video": false,
+    "integrationFolder": "cypress/tests",
+    "env": {
+        "db": {
+            "host": "localhost",
+            "user": "root",
+            "password": "Senharoot",
+            "database": "algamoneyapi"
+        }
+    }
 }

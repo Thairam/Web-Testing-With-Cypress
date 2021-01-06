@@ -13,5 +13,8 @@
   "devDependencies": {
     "cypress": "^6.2.1",
     "faker": "^5.1.0"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1"
   }
 }
