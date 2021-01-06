@@ -4,6 +4,17 @@
     "viewportWidth": 1400,
     "video": false,
     "integrationFolder": "cypress/tests",
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quite": true,
+            "overwrite": false,
+            "html": false,
+            "json": true
+        }
+    },
     "env": {
         "db": {
             "host": "localhost",

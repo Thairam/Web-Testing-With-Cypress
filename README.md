@@ -7,6 +7,7 @@ Didactic example of how to implement and organize automated Web tests using Cypr
 This repository contains:
 - Tests applied to WebSystem [Github](https://github.com/);
 - Tests that access to a MySQL database;
+- [Custom mocha reporter](cypress/fixtures/report.pdf)
 
 ## Prerequisites
 - [Node 12.16.1+](https://nodejs.org/en/download/)

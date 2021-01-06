@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-01-06T01:53:20.683Z",
+    "end": "2021-01-06T01:53:30.177Z",
+    "duration": 9494,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "939515ee-bcfb-4249-99a7-45d3b1b3b7af",
+      "title": "",
+      "fullFile": "cypress/tests/repositories/repository.spec.js",
+      "file": "cypress/tests/repositories/repository.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b37e0c04-adf7-4fe6-a8ac-b8e207ef24b4",
+          "title": "Repositories",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "create a new repository",
+              "fullTitle": "Repositories create a new repository",
+              "timedOut": null,
+              "duration": 9073,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.gui_clicar(_locators[\"default\"].ASIDE_BAR.BTN_NEW_REPOSITORY);\ncy.gui_preencher_campo(_locators[\"default\"].FORM_NEW_REPOSITORY.IPT_REPOSITORY_NAME, fakerRepositoryName);\ncy.gui_preencher_campo(_locators[\"default\"].FORM_NEW_REPOSITORY.IPT_DESCRIPTION, faker.lorem.sentence(4));\ncy.gui_clicar(_locators[\"default\"].FORM_NEW_REPOSITORY.BTN_CREATE_REPOSITORY);\nvar newUrl = Cypress.config().baseUrl.concat('/').concat(Cypress.env('username')).concat('/').concat(fakerRepositoryName.split(' ').join('-'));\ncy.url().should('to.be.equal', newUrl);",
+              "err": {},
+              "uuid": "fc2bd035-0d4e-4bc8-b401-57410f537fac",
+              "parentUUID": "b37e0c04-adf7-4fe6-a8ac-b8e207ef24b4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fc2bd035-0d4e-4bc8-b401-57410f537fac"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9073,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

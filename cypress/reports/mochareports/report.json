@@ -1,0 +1,319 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-01-06T01:53:03.372Z",
+    "end": "2021-01-06T01:53:40.553Z",
+    "duration": 22521,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "53493f36-324d-4f15-b26e-fa92064c1a37",
+      "title": "",
+      "fullFile": "cypress/tests/helpers/database-access.spec.js",
+      "file": "cypress/tests/helpers/database-access.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4f2e94db-d993-4228-98dc-d1a28570c999",
+          "title": "Database Acess",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Getting table data from a Mysql database",
+              "fullTitle": "Database Acess Getting table data from a Mysql database",
+              "timedOut": null,
+              "duration": 570,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('queryDb', 'SELECT * FROM categoria').then(function (res) {\n  res.forEach(function (categoria) {\n    return cy.log(\"C\\xF3digo: \".concat(categoria.codigo, \" | Nome: \").concat(categoria.nome));\n  });\n});",
+              "err": {},
+              "uuid": "fd569f92-c559-4254-93e2-87aec9a2c51e",
+              "parentUUID": "4f2e94db-d993-4228-98dc-d1a28570c999",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fd569f92-c559-4254-93e2-87aec9a2c51e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 570,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4017b87d-6686-4926-8f25-f8ad71e4d801",
+      "title": "",
+      "fullFile": "cypress/tests/helpers/promises.spec.js",
+      "file": "cypress/tests/helpers/promises.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "08be0d12-1112-4e48-bab5-fe5b1a0492ad",
+          "title": "Promises",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Promise sem wrap",
+              "fullTitle": "Promises Promise sem wrap",
+              "timedOut": null,
+              "duration": 2768,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('www.google.com');\ncy.get(btnPesquisaGoogle).then(function () {\n  return console.log('CT001: Primeiro');\n}); // simula uma query a um banco de dados que leva um certo tempo para ser processada.\ndb.cleanDB().then(function (res) {\n  return console.log('CT001: Resultado da promise SEM wrap: ', res);\n});\ncy.get(btnPesquisaGoogle).then(function () {\n  return console.log('CT001: Segundo\\n\\n');\n});",
+              "err": {},
+              "uuid": "fe082209-5c40-41fe-b85b-e987db21045f",
+              "parentUUID": "08be0d12-1112-4e48-bab5-fe5b1a0492ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Promise com wrap",
+              "fullTitle": "Promises Promise com wrap",
+              "timedOut": null,
+              "duration": 5249,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('www.google.com');\ncy.get(btnPesquisaGoogle).then(function () {\n  return console.log('CT002: Primeiro');\n}); // simula uma query a um banco de dados que leva um certo tempo para ser processada.\ncy.wrap(db.cleanDB()).then(function (res) {\n  return console.log('CT002: Resultado da promise COM wrap: ', res);\n});\ncy.get(btnPesquisaGoogle).then(function () {\n  return console.log('CT002: Segundo');\n});",
+              "err": {},
+              "uuid": "98941a4b-1fcc-4372-8d95-db51d1bbc9c8",
+              "parentUUID": "08be0d12-1112-4e48-bab5-fe5b1a0492ad",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fe082209-5c40-41fe-b85b-e987db21045f",
+            "98941a4b-1fcc-4372-8d95-db51d1bbc9c8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8017,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "939515ee-bcfb-4249-99a7-45d3b1b3b7af",
+      "title": "",
+      "fullFile": "cypress/tests/repositories/repository.spec.js",
+      "file": "cypress/tests/repositories/repository.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b37e0c04-adf7-4fe6-a8ac-b8e207ef24b4",
+          "title": "Repositories",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "create a new repository",
+              "fullTitle": "Repositories create a new repository",
+              "timedOut": null,
+              "duration": 9073,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.gui_clicar(_locators[\"default\"].ASIDE_BAR.BTN_NEW_REPOSITORY);\ncy.gui_preencher_campo(_locators[\"default\"].FORM_NEW_REPOSITORY.IPT_REPOSITORY_NAME, fakerRepositoryName);\ncy.gui_preencher_campo(_locators[\"default\"].FORM_NEW_REPOSITORY.IPT_DESCRIPTION, faker.lorem.sentence(4));\ncy.gui_clicar(_locators[\"default\"].FORM_NEW_REPOSITORY.BTN_CREATE_REPOSITORY);\nvar newUrl = Cypress.config().baseUrl.concat('/').concat(Cypress.env('username')).concat('/').concat(fakerRepositoryName.split(' ').join('-'));\ncy.url().should('to.be.equal', newUrl);",
+              "err": {},
+              "uuid": "fc2bd035-0d4e-4bc8-b401-57410f537fac",
+              "parentUUID": "b37e0c04-adf7-4fe6-a8ac-b8e207ef24b4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fc2bd035-0d4e-4bc8-b401-57410f537fac"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9073,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e7755821-e8bc-489f-91f4-38beeda457ea",
+      "title": "",
+      "fullFile": "cypress/tests/sign in/login.spec.js",
+      "file": "cypress/tests/sign in/login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f0e5fd88-e607-4efe-bdb4-0f90bd065e46",
+          "title": "Sign in",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login successfully",
+              "fullTitle": "Sign in login successfully",
+              "timedOut": null,
+              "duration": 3020,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.gui_login(Cypress.env('username'), Cypress.env('password'));\ncy.url().should('to.be.equal', Cypress.config().baseUrl.concat('/'));",
+              "err": {},
+              "uuid": "c98fbb5b-74c3-4833-8f0a-4d77d5070319",
+              "parentUUID": "f0e5fd88-e607-4efe-bdb4-0f90bd065e46",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "invalid credentials",
+              "fullTitle": "Sign in invalid credentials",
+              "timedOut": null,
+              "duration": 1841,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.gui_login(Cypress.env('username'), faker.internet.password(8));\ncy.gui_verificar_mensagem(_locators[\"default\"].LOGIN.DIV_ERROR_MSG, _mensagens[\"default\"].LOGIN.INCORRECT_USERNAME_AND_PASSWORD);",
+              "err": {},
+              "uuid": "3e6a4d97-e0c2-486c-84d6-e65dc9131f65",
+              "parentUUID": "f0e5fd88-e607-4efe-bdb4-0f90bd065e46",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c98fbb5b-74c3-4833-8f0a-4d77d5070319",
+            "3e6a4d97-e0c2-486c-84d6-e65dc9131f65"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4861,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

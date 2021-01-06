@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-01-06T01:53:03.372Z",
+    "end": "2021-01-06T01:53:03.964Z",
+    "duration": 592,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "53493f36-324d-4f15-b26e-fa92064c1a37",
+      "title": "",
+      "fullFile": "cypress/tests/helpers/database-access.spec.js",
+      "file": "cypress/tests/helpers/database-access.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4f2e94db-d993-4228-98dc-d1a28570c999",
+          "title": "Database Acess",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Getting table data from a Mysql database",
+              "fullTitle": "Database Acess Getting table data from a Mysql database",
+              "timedOut": null,
+              "duration": 570,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('queryDb', 'SELECT * FROM categoria').then(function (res) {\n  res.forEach(function (categoria) {\n    return cy.log(\"C\\xF3digo: \".concat(categoria.codigo, \" | Nome: \").concat(categoria.nome));\n  });\n});",
+              "err": {},
+              "uuid": "fd569f92-c559-4254-93e2-87aec9a2c51e",
+              "parentUUID": "4f2e94db-d993-4228-98dc-d1a28570c999",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fd569f92-c559-4254-93e2-87aec9a2c51e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 570,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
