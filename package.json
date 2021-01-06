@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^5.1.0",
+    "cypress": "^6.2.1",
     "faker": "^5.1.0"
   }
 }

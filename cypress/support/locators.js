@@ -1,16 +1,9 @@
+import HEADER from './seletores/header'
+import LOGIN from './seletores/login'
+
 const locators = {
-    LOGIN: {
-        IPT_USERNAME: '#login_field',
-        IPT_PASSWORD: '#password',
-        BTN_SIGN_IN: "input[value='Sign in']",
-        DIV_ERROR_MSG: '.flash-error > .container-lg'
-    },
-    HEADER: {
-        DROPDOWN_PROFILE: '.js-feature-preview-indicator-container > .Header-link > .dropdown-caret',
-        DROPDOWN_PROFILE_OPTIONS: {
-            SIGN_OUT: '.logout-form'
-        }
-    },
+    LOGIN,
+    HEADER,
     ASIDE_BAR: {
         BTN_NEW_REPOSITORY: '#dashboard-repos-container > #repos-container > .f4 > .btn'
     },
