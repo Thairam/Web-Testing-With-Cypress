@@ -14,13 +14,5 @@
             "html": false,
             "json": true
         }
-    },
-    "env": {
-        "db": {
-            "host": "localhost",
-            "user": "root",
-            "password": "Senharoot",
-            "database": "algamoneyapi"
-        }
     }
 }

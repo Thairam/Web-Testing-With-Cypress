@@ -5,3 +5,6 @@
 package-lock.json
 
 cypress.env.json
+
+.env
+.debug.log

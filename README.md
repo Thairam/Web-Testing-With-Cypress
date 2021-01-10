@@ -13,12 +13,22 @@ This repository contains:
 - [Node 12.16.1+](https://nodejs.org/en/download/)
 
 ## Set the environment variables
-Some settings related to the project are defined by environment variables. To configure the settings, make a copy of the `cypress.env.example.json` file, naming it` cypress.env.json`. After that, open and edit the settings as needed. The following environment variables are available:
+To configure the settings, make a copy of the `cypress.env.example.json` file, naming it` cypress.env.json`. After that, open and edit the settings as needed. The following environment variables are available:
 
 | VARIABLE | DESCRIPTION  | DEFAULT |
 |-----|-----|-----|
 | `username` | User with valid and verified profile on Github. | `yourgithubusername` |
 | `password` | Valid and verified user profile password on Github. | `yourgithubpassword` |
+
+## Set the environment variables for configuring the MySQL Database
+To configure the settings, make a copy of the `env.example` file, naming it` .env`. After that, open and edit the settings as needed. The following environment variables are available:
+
+| VARIABLE | DESCRIPTION  | DEFAULT |
+|-----|-----|-----|
+| `MYSQL_URI_TEST` | location where the MySQL database is hosted | `localhost` |
+| `MYSQL_DB_USER` | Username to connect to the MySQL database. | `root` |
+| `MYSQL_DB_PASS` | Password to connect to the MySQL database. | `secret` |
+| `MYSQL_DB_NAME` | MySQL Database name. | `database_name` |
 
 ## Observation
 The purpose of this repository is just to show a way on how to use Cypress to automate Web tests and how to structure your project in a simple and organized way.

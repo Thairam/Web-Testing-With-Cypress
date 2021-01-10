@@ -1,9 +1,11 @@
 import HEADER from './seletores/header'
 import LOGIN from './seletores/login'
+import ISSUES from './seletores/issues'
 
 const locators = {
     LOGIN,
     HEADER,
+    ISSUES,
     ASIDE_BAR: {
         BTN_NEW_REPOSITORY: '#dashboard-repos-container > #repos-container > .f4 > .btn'
     },
